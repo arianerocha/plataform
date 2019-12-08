@@ -14,7 +14,7 @@ services:
     depends_on:
       - postgres
     volumes:
-      - ./.cover:/root/krakenlab/plataform/.cover
+      - ./misc/cover:/root/krakenlab/plataform/misc/cover
 
   postgres:
     image: postgres:11.4

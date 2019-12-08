@@ -1,0 +1,28 @@
+language: go
+
+go:
+- "1.13.1"
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.25.0
+
+install: skip
+
+before_install:
+  # Docker
+  - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+  - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  - sudo apt-get update
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+  # Docker Compose
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  # Coveralls
+  - go get github.com/mattn/goveralls
+
+script:
+  - sudo docker-compose up -d --build
+  - sudo docker-compose exec -w /root/krakenlab/plataform  web go test -race -covermode atomic -coverprofile=misc/cover/cover.cov -mod vendor ./...
+  - goveralls -service=travis-ci -coverprofile=misc/cover/cover.cov

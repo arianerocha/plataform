@@ -46,3 +46,8 @@ func (server *Server) SetupHTMLRender() {
 		},
 	)
 }
+
+// Run the engine
+func (server *Server) Run() {
+	panic(server.engine.Run("0.0.0.0:3000"))
+}
