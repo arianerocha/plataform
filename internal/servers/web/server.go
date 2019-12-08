@@ -2,6 +2,7 @@ package web
 
 import (
 	"github.com/krakenlab/plataform/internal/configs"
+	"github.com/krakenlab/plataform/internal/servers/web/helpers"
 
 	gintemplate "github.com/foolin/gin-template"
 	"github.com/gin-gonic/gin"
@@ -41,7 +42,7 @@ func (server *Server) SetupHTMLRender() {
 				"layouts/navbar",
 				"layouts/footbar",
 			},
-			// Funcs:        funcs.Funcs(),
+			Funcs:        helpers.Helpers(),
 			DisableCache: true,
 		},
 	)
