@@ -1,0 +1,25 @@
+{{define "navbar"}}
+    <nav class="plataform ten percent height">
+        <div class="ui container">
+            <div class="ui inverted secondary menu">
+                <a class="active item">
+                    <h5 class="ui inverted header">
+                        <i class="plataform rotate forty five degrees orange square icon"></i>
+                        <div class="content">{{translate .locale "layouts.navbar.home"}}</div>
+                    </h5>
+                </a>
+                <a class="item">{{translate .locale "layouts.navbar.messages"}}</a>
+                <a class="item">{{translate .locale "layouts.navbar.friends"}}</a>
+                <div class="right menu">
+                    <div class="item">
+                        <div class="ui icon input">
+                            <input type="text" placeholder='{{translate .locale "layouts.navbar.search"}}'>
+                            <i class="search link icon"></i>
+                        </div>
+                    </div>
+                    <a class="ui item">{{translate .locale "layouts.navbar.logout"}}</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+{{end}}

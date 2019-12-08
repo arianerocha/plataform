@@ -1,0 +1,8 @@
+pt-BR:
+  layouts:
+    navbar:
+      home: Inicio
+      messages: Mensagens
+      friends: Amigos
+      search: Busca...
+      logout: Sair

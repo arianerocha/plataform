@@ -1,0 +1,83 @@
+/* Application CSS */
+
+html, body {
+  min-height: 100% !important;
+}
+
+.plataform.one.hundred.percent.height {
+  min-height: 100%;
+}
+
+.plataform.ninety.percent.height {
+  min-height: 90%;
+}
+
+.plataform.eighty.percent.height {
+  min-height: 80%;
+}
+
+.plataform.seventy.percent.height {
+  min-height: 70%;
+}
+
+.plataform.sixty.percent.height {
+  min-height: 60%;
+}
+
+.plataform.fifty.percent.height {
+  min-height: 50%;
+}
+
+.plataform.forty.percent.height {
+  min-height: 40%;
+}
+
+.plataform.thirty.percent.height {
+  min-height: 30%;
+}
+
+.plataform.twenty.percent.height {
+  min-height: 20%;
+}
+
+.plataform.fifteen.percent.height {
+  min-height: 15%;
+}
+
+.plataform.ten.percent.height {
+  min-height: 10%;
+}
+
+.plataform.five.percent.height {
+  min-height: 5%;
+}
+
+
+.plataform.zero.percent.height {
+  height: 0%;
+}
+
+.plataform.rotate.forty.five.degrees {
+  transform: rotate(45deg);
+}
+
+.plataform.input.max.width {
+  max-width: 30rem !important;
+}
+
+.plataform.justify.text {
+  text-align: justify;
+}
+
+body {
+  background-color: #1B1C1D;
+  background-image: url("/static/images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  background-image: linear-gradient(#FFFFFF00, #1B1C1D);
+}

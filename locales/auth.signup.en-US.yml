@@ -1,0 +1,21 @@
+en-US:
+  auth:
+    signup:
+      title: Create Account
+      subtitle: Get a free account to play with your friends!
+      form:
+        email: Email
+        email_placeholder: my@email.io
+        password: Password
+        password_placeholder: Password
+        repeat_password: Repeat Password
+        repeat_password_placeholder: Repeat Password
+        terms_and_conditions: I accept the Terms and Conditions
+        privacy_policy: I accept the Privacy Policy
+        newsletter: Subscribe to Newsletter
+        newsletter_tip: If you subscribe to our newsletter, you are consenting to receive regular e-mails containing information on updates, extensions, patches, community events and promotions from Albion Online. You can revoke your consent to the use of your e-mail address for sending the newsletter at any time with effect for the future.
+        submit: Create account
+        your_password_must: "Your password must:"
+        password_tips:
+          first: bet between 8 and 256 characters long
+          second: not contain any invalid chararcters

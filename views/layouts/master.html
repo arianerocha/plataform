@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta locale='{{.locale}}'>
+        <title>plataform</title>
+        {{template "stylesheet" .}}
+        {{template "head" .}}
+    </head>
+
+    <body>
+        {{template "navbar" .}}
+
+        {{template "main" .}}
+
+        <footer>
+            {{template "footbar" .}}
+            {{template "javascript" .}}
+            {{template "footer" .}}
+        </footer>
+    </body>
+</html>
