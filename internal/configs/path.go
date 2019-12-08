@@ -26,3 +26,8 @@ func (c *PathConfig) Views() string {
 func (c *PathConfig) Static() string {
 	return path.Join(c.App(), "static")
 }
+
+// Locales path
+func (c *PathConfig) Locales() string {
+	return path.Join(c.App(), "locales")
+}

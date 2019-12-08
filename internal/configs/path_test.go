@@ -30,6 +30,11 @@ func (suite *PathTestSuite) TestPathStatic() {
 	suite.Contains(Path().Static(), "/static")
 }
 
+func (suite *PathTestSuite) TestPathLocales() {
+	suite.Contains(Path().Locales(), Path().App())
+	suite.Contains(Path().Locales(), "/locales")
+}
+
 func TestPathTestSuite(t *testing.T) {
 	suite.Run(t, new(PathTestSuite))
 }
