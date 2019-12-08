@@ -11,5 +11,6 @@ type Handler interface {
 func Handlers() []Handler {
 	return []Handler{
 		NewRoot(),
+		NewSignUp(),
 	}
 }

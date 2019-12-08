@@ -16,7 +16,10 @@ func (suite *LocalesTestSuite) TestNewLocales() {
 
 func (suite *LocalesTestSuite) TestAll() {
 	suite.Contains(NewLocales().All(), NewLocales().PtBR())
-	suite.Equal(NewLocales().All(), NewLocales().EnUS())
+	suite.Contains(NewLocales().All(), NewLocales().EnUS())
+	suite.Contains(NewLocales().All(), NewLocales().EnGB())
+
+	suite.Contains(NewLocales().All(), NewLocales().Default())
 }
 
 func (suite *LocalesTestSuite) TestLocaleOrDefault() {

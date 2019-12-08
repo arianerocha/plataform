@@ -3,9 +3,8 @@ package web
 import (
 	"github.com/krakenlab/plataform/internal/configs"
 	"github.com/krakenlab/plataform/internal/servers/web/handlers"
-	"github.com/krakenlab/plataform/internal/servers/web/helpers"
+	"github.com/krakenlab/plataform/internal/servers/web/htmlrender"
 
-	gintemplate "github.com/foolin/gin-template"
 	"github.com/gin-gonic/gin"
 )
 
@@ -41,20 +40,7 @@ func (server *Server) SetupHandlers() {
 
 // SetupHTMLRender engine
 func (server *Server) SetupHTMLRender() {
-	server.engine.HTMLRender = gintemplate.New(
-		gintemplate.TemplateConfig{
-			Root:      configs.Path().Views(),
-			Extension: ".html",
-			Master:    "layouts/master",
-			Partials: []string{
-				"layouts/partials",
-				"layouts/navbar",
-				"layouts/footbar",
-			},
-			Funcs:        helpers.Helpers(),
-			DisableCache: true,
-		},
-	)
+	server.engine.HTMLRender = htmlrender.New()
 }
 
 // Run the engine

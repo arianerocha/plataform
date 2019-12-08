@@ -2,5 +2,6 @@ package handlers
 
 // Paths
 const (
-	RootPath = "/"
+	RootPath   = "/"
+	SignUpPath = "/signup/:locale"
 )
