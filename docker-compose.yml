@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker.web.Dockerfile
+    environment:
+      - PORT=3030
+      - DB_ADAPTER=postgres
+      - DB_URL=host=postgres port=5432 user=postgres dbname=plataform password=postgres sslmode=disable
+    ports:
+      - 3030:3030
+    depends_on:
+      - postgres
+    volumes:
+      - ./.cover:/root/krakenlab/plataform/.cover
+
+  postgres:
+    image: postgres:11.4
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=plataform
+      - TZ=GMT
