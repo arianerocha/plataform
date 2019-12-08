@@ -16,3 +16,8 @@ func Path() *PathConfig {
 func (c *PathConfig) App() string {
 	return path.Join(Sys().HomeDir(), Project().Org(), Project().Name())
 }
+
+// Views path
+func (c *PathConfig) Views() string {
+	return path.Join(c.App(), "views")
+}

@@ -20,6 +20,11 @@ func (suite *PathTestSuite) TestPathApp() {
 	suite.Contains(Path().App(), Project().Name())
 }
 
+func (suite *PathTestSuite) TestPathViews() {
+	suite.Contains(Path().Views(), Path().App())
+	suite.Contains(Path().Views(), "/views")
+}
+
 func TestPathTestSuite(t *testing.T) {
 	suite.Run(t, new(PathTestSuite))
 }
