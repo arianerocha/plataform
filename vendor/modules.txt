@@ -1,3 +1,5 @@
+# github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a
+github.com/asaskevich/govalidator
 # github.com/davecgh/go-spew v1.1.1
 github.com/davecgh/go-spew/spew
 # github.com/foolin/gin-template v0.0.0-20190415034731-41efedfb393b
@@ -16,28 +18,73 @@ github.com/go-playground/locales/currency
 github.com/go-playground/universal-translator
 # github.com/golang/protobuf v1.3.2
 github.com/golang/protobuf/proto
+# github.com/gorilla/context v1.1.1
+github.com/gorilla/context
+# github.com/gorilla/securecookie v1.1.1
+github.com/gorilla/securecookie
+# github.com/gorilla/sessions v1.2.0
+github.com/gorilla/sessions
+# github.com/gosimple/slug v1.9.0
+github.com/gosimple/slug
 # github.com/jinzhu/gorm v1.9.11
 github.com/jinzhu/gorm
 # github.com/jinzhu/inflection v1.0.0
 github.com/jinzhu/inflection
+# github.com/jinzhu/now v1.0.1
+github.com/jinzhu/now
 # github.com/json-iterator/go v1.1.7
 github.com/json-iterator/go
 # github.com/leodido/go-urn v1.1.0
 github.com/leodido/go-urn
 # github.com/mattn/go-isatty v0.0.9
 github.com/mattn/go-isatty
+# github.com/microcosm-cc/bluemonday v1.0.2
+github.com/microcosm-cc/bluemonday
 # github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421
 github.com/modern-go/concurrent
 # github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742
 github.com/modern-go/reflect2
 # github.com/pmezard/go-difflib v1.0.0
 github.com/pmezard/go-difflib/difflib
+# github.com/qor/admin v0.0.0-20191205023516-9032e7fec172
+github.com/qor/admin
+# github.com/qor/assetfs v0.0.0-20170713023933-ff57fdc13a14
+github.com/qor/assetfs
+# github.com/qor/cache v0.0.0-20171031031927-c9d48d1f13ba
+github.com/qor/cache
+github.com/qor/cache/memory
+# github.com/qor/i18n v0.0.0-20181014061908-f7206d223bcd
+github.com/qor/i18n
+github.com/qor/i18n/backends/yaml
+# github.com/qor/middlewares v0.0.0-20170822143614-781378b69454
+github.com/qor/middlewares
+# github.com/qor/qor v0.0.0-20191022064424-b3deff729f68
+github.com/qor/qor
+github.com/qor/qor/resource
+github.com/qor/qor/utils
+# github.com/qor/responder v0.0.0-20171031032654-b6def473574f
+github.com/qor/responder
+# github.com/qor/roles v0.0.0-20171127035124-d6375609fe3e
+github.com/qor/roles
+# github.com/qor/session v0.0.0-20170907035918-8206b0adab70
+github.com/qor/session
+github.com/qor/session/gorilla
+github.com/qor/session/manager
+# github.com/qor/validations v0.0.0-20171228122639-f364bca61b46
+github.com/qor/validations
+# github.com/rainycape/unidecode v0.0.0-20150907023854-cb7f23ec59be
+github.com/rainycape/unidecode
 # github.com/stretchr/testify v1.4.0
 github.com/stretchr/testify/assert
 github.com/stretchr/testify/require
 github.com/stretchr/testify/suite
+# github.com/theplant/cldr v0.0.0-20190423050709-9f76f7ce4ee8
+github.com/theplant/cldr
 # github.com/ugorji/go/codec v1.1.7
 github.com/ugorji/go/codec
+# golang.org/x/net v0.0.0-20190311183353-d8887717615a
+golang.org/x/net/html
+golang.org/x/net/html/atom
 # golang.org/x/sys v0.0.0-20190813064441-fde4db37ae7a
 golang.org/x/sys/unix
 # gopkg.in/go-playground/validator.v9 v9.29.1
