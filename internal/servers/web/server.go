@@ -2,6 +2,7 @@ package web
 
 import (
 	"github.com/krakenlab/plataform/internal/configs"
+	"github.com/krakenlab/plataform/internal/servers/web/handlers"
 	"github.com/krakenlab/plataform/internal/servers/web/helpers"
 
 	gintemplate "github.com/foolin/gin-template"
@@ -22,12 +23,20 @@ func NewServer() *Server {
 // Setup routes, sub-engines, session, etc
 func (server *Server) Setup() {
 	server.SetupStatic()
+	server.SetupHandlers()
 	server.SetupHTMLRender()
 }
 
 // SetupStatic engine
 func (server *Server) SetupStatic() {
 	server.engine.Static("static", configs.Path().Static())
+}
+
+// SetupHandlers engine
+func (server *Server) SetupHandlers() {
+	for _, handler := range handlers.Handlers() {
+		handler.Setup(server.engine)
+	}
 }
 
 // SetupHTMLRender engine
