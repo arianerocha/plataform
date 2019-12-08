@@ -21,3 +21,8 @@ func (c *PathConfig) App() string {
 func (c *PathConfig) Views() string {
 	return path.Join(c.App(), "views")
 }
+
+// Static path
+func (c *PathConfig) Static() string {
+	return path.Join(c.App(), "static")
+}

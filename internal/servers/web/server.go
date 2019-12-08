@@ -20,7 +20,13 @@ func NewServer() *Server {
 
 // Setup routes, sub-engines, session, etc
 func (server *Server) Setup() {
+	server.SetupStatic()
 	server.SetupHTMLRender()
+}
+
+// SetupStatic engine
+func (server *Server) SetupStatic() {
+	server.engine.Static("static", configs.Path().Static())
 }
 
 // SetupHTMLRender engine

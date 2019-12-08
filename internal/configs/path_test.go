@@ -25,6 +25,11 @@ func (suite *PathTestSuite) TestPathViews() {
 	suite.Contains(Path().Views(), "/views")
 }
 
+func (suite *PathTestSuite) TestPathStatic() {
+	suite.Contains(Path().Static(), Path().App())
+	suite.Contains(Path().Static(), "/static")
+}
+
 func TestPathTestSuite(t *testing.T) {
 	suite.Run(t, new(PathTestSuite))
 }
