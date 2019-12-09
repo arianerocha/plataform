@@ -45,5 +45,5 @@ func (server *Server) SetupHTMLRender() {
 
 // Run the engine
 func (server *Server) Run() {
-	panic(server.engine.Run(configs.Web().RunnableInterface()))
+	_ = server.engine.Run(configs.Web().RunnableInterface())
 }

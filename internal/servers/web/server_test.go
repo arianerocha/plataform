@@ -36,7 +36,9 @@ func (suite *ServerTestSuite) TestSetupHTMLRender() {
 func (suite *ServerTestSuite) TestRun() {
 	defer os.Setenv("PORT", configs.Web().Port())
 
-	os.Setenv("PORT", "54321")
+	err := os.Setenv("PORT", "54321")
+	suite.NoError(err)
+
 	server := NewServer()
 
 	suite.NotPanics(func() { go server.Run() })
