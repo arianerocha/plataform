@@ -3,10 +3,8 @@ package handlers
 import (
 	"net/http"
 	"net/http/httptest"
-	"strings"
 	"testing"
 
-	"github.com/krakenlab/plataform/internal/repositories"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -20,15 +18,15 @@ func (suite *SignUpTestSuite) TestNewNewSignUp() {
 
 func (suite *SignUpTestSuite) TestGET() {
 	NewSignUp().Setup(suite.engine)
-	for _, locale := range repositories.NewLocales().All() {
-		req, err := http.NewRequest(http.MethodGet, strings.ReplaceAll(SignUpPath, ":locale", locale.Symbol), nil)
-		suite.NoError(err)
 
-		rr := httptest.NewRecorder()
+	req, err := http.NewRequest(http.MethodGet, SignUpPath, nil)
+	suite.NoError(err)
 
-		suite.ServeHTTP(rr, req)
-		suite.Equal(http.StatusOK, rr.Code)
-	}
+	rr := httptest.NewRecorder()
+
+	suite.ServeHTTP(rr, req)
+	suite.Equal(http.StatusPermanentRedirect, rr.Code)
+	suite.Equal("<a href=\"/signup/en-US\">Permanent Redirect</a>.\n\n", rr.Body.String())
 }
 
 func TestSignUpTestSuite(t *testing.T) {

@@ -12,5 +12,6 @@ func Handlers() []Handler {
 	return []Handler{
 		NewRoot(),
 		NewSignUp(),
+		NewLocalizedSignUp(),
 	}
 }
