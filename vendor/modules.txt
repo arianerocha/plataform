@@ -2,6 +2,8 @@
 cloud.google.com/go/civil
 # github.com/asaskevich/govalidator v0.0.0-20190424111038-f61b66f89f4a
 github.com/asaskevich/govalidator
+# github.com/badoux/checkmail v0.0.0-20181210160741-9661bd69e9ad
+github.com/badoux/checkmail
 # github.com/davecgh/go-spew v1.1.1
 github.com/davecgh/go-spew/spew
 # github.com/denisenkom/go-mssqldb v0.0.0-20190515213511-eb9f6a1743f3
