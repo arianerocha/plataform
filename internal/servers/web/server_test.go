@@ -1,8 +1,10 @@
 package web
 
 import (
+	"os"
 	"testing"
 
+	"github.com/krakenlab/plataform/internal/configs"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -29,6 +31,15 @@ func (suite *ServerTestSuite) TestSetupStatic() {
 func (suite *ServerTestSuite) TestSetupHTMLRender() {
 	server := NewServer()
 	suite.NotPanics(server.SetupHTMLRender)
+}
+
+func (suite *ServerTestSuite) TestRun() {
+	defer os.Setenv("PORT", configs.Web().Port())
+
+	os.Setenv("PORT", "54321")
+	server := NewServer()
+
+	suite.NotPanics(func() { go server.Run() })
 }
 
 func TestServerTestSuite(t *testing.T) {
