@@ -25,3 +25,21 @@ func (repo *Accounts) Model() *models.Account {
 func (repo *Accounts) AutoMigrate() error {
 	return repo.conn.AutoMigrate(repo.Model()).Error
 }
+
+// Create an account
+func (repo *Accounts) Create(account *models.Account) error {
+	return repo.conn.Create(account).Error
+}
+
+// Size of this repository
+func (repo *Accounts) Size() (int, error) {
+	var c int
+	err := repo.conn.Model(repo.Model()).Count(&c).Error
+
+	return c, err
+}
+
+// DeleteAll records in this repository
+func (repo *Accounts) DeleteAll() error {
+	return repo.conn.Delete(repo.Model()).Error
+}
