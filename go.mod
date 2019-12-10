@@ -11,4 +11,5 @@ require (
 	github.com/qor/admin v0.0.0-20191205023516-9032e7fec172 // indirect
 	github.com/qor/i18n v0.0.0-20181014061908-f7206d223bcd
 	github.com/stretchr/testify v1.4.0
+	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
 )

@@ -25,6 +25,10 @@ func (suite *AccountsTestSuite) TestCreate() {
 	suite.NoError(err)
 	suite.Equal(0, size)
 
+	exists, err := NewAccounts().EmailAlreadyRegistered("testing@testing.io")
+	suite.NoError(err)
+	suite.False(exists)
+
 	account := NewAccounts().Model()
 	account.Email = "testing@testing.io"
 	account.SecurePassword = "FFFFFF"
@@ -35,6 +39,10 @@ func (suite *AccountsTestSuite) TestCreate() {
 	size, err = NewAccounts().Size()
 	suite.NoError(err)
 	suite.Equal(1, size)
+
+	exists, err = NewAccounts().EmailAlreadyRegistered("testing@testing.io")
+	suite.NoError(err)
+	suite.True(exists)
 }
 
 func TestAccountsTestSuite(t *testing.T) {

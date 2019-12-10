@@ -39,6 +39,14 @@ func (repo *Accounts) Size() (int, error) {
 	return c, err
 }
 
+// EmailAlreadyRegistered on this repository
+func (repo *Accounts) EmailAlreadyRegistered(email string) (bool, error) {
+	var c int
+	err := repo.conn.Model(repo.Model()).Where("email = ?", email).Count(&c).Error
+
+	return c != 0, err
+}
+
 // DeleteAll records in this repository
 func (repo *Accounts) DeleteAll() error {
 	return repo.conn.Delete(repo.Model()).Error

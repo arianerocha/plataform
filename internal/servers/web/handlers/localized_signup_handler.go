@@ -22,5 +22,5 @@ func (h *LocalizedSignUp) Setup(engine *gin.Engine) {
 // GET at LocalizedSignUpPath
 func (h *LocalizedSignUp) GET(c *gin.Context) {
 	locale := repositories.NewLocales().LocaleOrDefault(c.Param("locale"))
-	c.HTML(http.StatusOK, "auth/signup", gin.H{"locale": locale.Symbol})
+	c.HTML(http.StatusOK, "signup/get", gin.H{"locale": locale.Symbol})
 }
