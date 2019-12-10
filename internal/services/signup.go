@@ -7,7 +7,6 @@ import (
 	"github.com/krakenlab/plataform/internal/repositories"
 
 	"github.com/badoux/checkmail"
-	_ "github.com/badoux/checkmail"
 )
 
 // SignUpErrors
