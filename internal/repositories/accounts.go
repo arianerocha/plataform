@@ -49,5 +49,5 @@ func (repo *Accounts) EmailAlreadyRegistered(email string) (bool, error) {
 
 // DeleteAll records in this repository
 func (repo *Accounts) DeleteAll() error {
-	return repo.conn.Delete(repo.Model()).Error
+	return repo.conn.Unscoped().Delete(repo.Model()).Error
 }

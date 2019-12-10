@@ -11,12 +11,12 @@ import (
 
 // SignUpErrors
 const (
-	PrivacySignUpError         = "privacy_error"
-	TermsSignUpError           = "terms_error"
-	ValidPasswordSignUpError   = "valid_password_error"
-	RepeatPasswordSignUpError  = "repeat_password_error"
-	EmailFormatSignUpError     = "email_format_error"
-	EmailMustBeUniqSignUpError = "uniq_emaul_error"
+	PrivacySignUpError         = "signup.privacy_error"
+	TermsSignUpError           = "signup.terms_error"
+	ValidPasswordSignUpError   = "signup.valid_password_error"
+	RepeatPasswordSignUpError  = "signup.repeat_password_error"
+	EmailFormatSignUpError     = "signup.email_format_error"
+	EmailMustBeUniqSignUpError = "signup.uniq_email_error"
 )
 
 // SignUp service
@@ -64,12 +64,14 @@ func (service *SignUp) Errors() []error {
 }
 
 // Valid the form
-func (service *SignUp) Valid() {
+func (service *SignUp) Valid() bool {
 	service.mustAcceptPrivacy()
 	service.mustAcceptTerms()
 	service.passwordsMustBeValid()
 	service.passwordsMustMatch()
 	service.emailMustBeValid()
+
+	return len(service.errors) == 0
 }
 
 // Create the account

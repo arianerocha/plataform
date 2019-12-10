@@ -19,6 +19,12 @@
 					<div class="row">
 						<div class="ui container">
 							<div class="ui placeholder inverted segment">
+								{{range .errors}}
+									<div class="ui warning message">
+										<i class="close icon"></i>
+										{{translate_error $.locale .}}
+									</div>
+								{{end}}
 								<form class="ui inverted form" method="post">
 									<div class="field plataform input max width">
 										<label>{{translate .locale "auth.signup.form.email"}}</label>

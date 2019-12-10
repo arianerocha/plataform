@@ -6,7 +6,7 @@ import "github.com/jinzhu/gorm"
 type Account struct {
 	gorm.Model
 
-	Email          string `json:"email" gorm:"unique;index;not null"`
+	Email          string `json:"email" gorm:"index"`
 	Locale         string `json:"locale" gorm:"size:5"`
 	Roles          string `gorm:"size:256"`
 	SecurePassword string `json:"-"`

@@ -1,0 +1,33 @@
+{{define "head"}}
+{{end}}
+
+{{define "main"}}
+	<main class="plataform ninety percent height">
+		<div class="ui plataform one hundred percent height padded grid middle aligned">
+			<div class="sixteen wide column">
+				<div class="ui middle aligned center aligned grid">
+					<div class="row">
+						<h1 class="ui inverted header">
+							<i class="orange sign in icon"></i>
+							<div class="content">
+								{{translate .locale "auth.signup.title"}}
+								<div class="sub header">{{translate .locale "auth.signup.subtitle"}}</div>
+							</div>
+						</h1>
+					</div>
+
+					<div class="row">
+						<div class="ui container">
+							<div class="ui placeholder inverted segment">
+								<p> Sucesso! </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{{end}}
+
+{{define "footer"}}
+{{end}}

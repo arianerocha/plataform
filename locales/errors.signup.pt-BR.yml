@@ -1,0 +1,9 @@
+pt-BR:
+  errors:
+    signup:
+      privacy_error: O termo de privacidade não foi aceito
+      terms_error: O termo de uso não foi aceito
+      valid_password_error: A senha não é válida
+      repeat_password_error: As senhas não são iguais
+      email_format_error: Email não está em um formato correto
+      uniq_email_error: Email já está em uso

@@ -36,7 +36,7 @@ func (suite *SignUpTestSuite) TestValid() {
 	suite.NoError(err)
 
 	service := NewSignUp("@fail@email@-unk-mail.to", "pwd", "pwd err", "pt-BR", false, false, false)
-	suite.NotPanics(service.Valid)
+	suite.False(service.Valid())
 
 	suite.Contains(service.Errors(), errors.New(PrivacySignUpError))
 	suite.Contains(service.Errors(), errors.New(TermsSignUpError))
@@ -44,7 +44,7 @@ func (suite *SignUpTestSuite) TestValid() {
 	suite.Contains(service.Errors(), errors.New(EmailFormatSignUpError))
 
 	service = NewSignUp("marlon.schweigert@krakenlab.io", "nopasswd123123", "nopasswd123123", "pt-BR", true, true, true)
-	suite.NotPanics(service.Valid)
+	suite.True(service.Valid())
 
 	suite.Zero(len(service.Errors()))
 }
@@ -54,13 +54,13 @@ func (suite *SignUpTestSuite) TestCreate() {
 	suite.NoError(err)
 
 	service := NewSignUp("marlon.schweigert@krakenlab.io", "nopasswd123123", "nopasswd123123", "pt-BR", true, true, true)
-	suite.NotPanics(service.Valid)
+	suite.True(service.Valid())
 
 	suite.Zero(len(service.Errors()))
 	suite.NoError(service.Create())
 
 	service = NewSignUp("marlon.schweigert@krakenlab.io", "nopasswd123123", "nopasswd123123", "pt-BR", true, true, true)
-	suite.NotPanics(service.Valid)
+	suite.False(service.Valid())
 
 	suite.Equal(1, len(service.Errors()))
 	suite.Contains(service.Errors(), errors.New(EmailMustBeUniqSignUpError))

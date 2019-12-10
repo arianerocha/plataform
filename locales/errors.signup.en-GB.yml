@@ -1,0 +1,9 @@
+en-GB:
+  errors:
+    signup:
+      privacy_error: Privacy term not accepted
+      terms_error: Usage term not accepted
+      valid_password_error: Password is not valid
+      repeat_password_error: Passwords are not the same
+      email_format_error: Email is not in the correct format
+      uniq_email_error: Email is already in use
