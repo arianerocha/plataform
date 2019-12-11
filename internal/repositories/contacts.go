@@ -26,7 +26,7 @@ func (repo *Contacts) AutoMigrate() error {
 	return repo.conn.AutoMigrate(repo.Model()).Error
 }
 
-// FirstOrCreate a contact
-func (repo *Contacts) FirstOrCreate(contact *models.Contact) error {
+// CreateIfNotExists a contact
+func (repo *Contacts) CreateIfNotExists(contact *models.Contact) error {
 	return repo.conn.FirstOrCreate(contact, "email = ?", contact.Email).Error
 }

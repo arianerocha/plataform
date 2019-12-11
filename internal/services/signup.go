@@ -80,6 +80,10 @@ func (service *SignUp) Create() error {
 	service.account.Email = service.form.email
 	service.account.SecurePassword = NewPassword().SecurePassword(service.form.password)
 
+	if service.form.newsletter {
+		go NewContact(service.account.Email, service.account.Locale).Create()
+	}
+
 	return service.repo.Create(service.account)
 }
 
