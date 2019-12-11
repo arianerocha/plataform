@@ -13,9 +13,10 @@ pt-BR:
         terms_and_conditions: Eu aceito os Termos e Condições
         privacy_policy: Eu aceito as Políticas de Privacidade
         newsletter: Inscrever-se na Newsletter
-        newsletter_tip: Se você se inscrever no nosso boletim de notícias, você consentirá em receber e-mails regulares contendo informações sobre atualizações, extensões, pacotes, eventos de comunidade e promoções de Albion Online. Você pode revogar seu consentimento no uso deste endereço de e-mail para o envio de notícias a qualquer momento no futuro.
+        newsletter_tip: Se você se inscrever no nosso boletim de notícias, você consentirá em receber e-mails regulares contendo informações sobre atualizações, extensões, pacotes, eventos de comunidade e promoções da KrakenLab. Você pode revogar seu consentimento no uso deste endereço de e-mail para o envio de notícias a qualquer momento no futuro.
         submit: Criar conta
         your_password_must: "Sua senha precisa:"
         password_tips:
           first: Ter de 8 a 256 caracteres
           second: Não pode conter caracteres inválidas
+      success: Sua conta foi criada! Foi enviado um link para confirmação da conta.
