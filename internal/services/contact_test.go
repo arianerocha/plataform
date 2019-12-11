@@ -3,7 +3,6 @@ package services
 import (
 	"testing"
 
-	"github.com/krakenlab/plataform/internal/repositories"
 	"github.com/stretchr/testify/suite"
 )
 
@@ -12,9 +11,6 @@ type ContactTestSuite struct {
 }
 
 func (suite *ContactTestSuite) TestNewContact() {
-	err := repositories.NewAccounts().DeleteAll()
-	suite.NoError(err)
-
 	service := NewContact("email@mail.to", "pt-BR")
 	suite.NotNil(service)
 
@@ -26,9 +22,6 @@ func (suite *ContactTestSuite) TestNewContact() {
 }
 
 func (suite *ContactTestSuite) TestCreate() {
-	err := repositories.NewAccounts().DeleteAll()
-	suite.NoError(err)
-
 	service := NewContact("email@mail.to", "pt-BR")
 	suite.NotNil(service)
 
